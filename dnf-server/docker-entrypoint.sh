@@ -115,7 +115,7 @@ sed -i --follow-symlinks "s/GM_LANDER_VERSION/$GM_LANDER_VERSION/g" `find /root 
 cd /root && chmod +x /root/*
 
 # 启动frida-server
-nohup ./frida-server > frida-server.log 2>&1 &
+nohup ./frida-server -l 0.0.0.0:27042 > /home/neople/game/log/frida.log 2>&1 &
 
 # 启动服务
 ./run
