@@ -2,8 +2,6 @@ find /home/neople/ -name '*.log' -type f -print -exec rm -f {} \;
 find /home/neople/ -name '*.pid' -type f -print -exec rm -f {} \;
 find /home/neople/ -name 'core.*' -type f -print -exec rm -f {} \;
 
-cd /root
-./GateRestart
 
 cd /home/neople/stun
 chmod 777 *
@@ -112,7 +110,7 @@ cd /home/neople/game
 chmod 777 *
 rm -rf /home/neople/game/log/*
 sleep 2
-LD_PRELOAD=/lib/libhook.so ./df_game_r siroco11 start &
+./df_game_r siroco11 start &
 sleep 2
-LD_PRELOAD=/lib/libhook.so ./df_game_r siroco52 start &
+./df_game_r siroco52 start &
 tail -f /dev/null

@@ -46,7 +46,7 @@ public class MainController implements Initializable {
                 try {
                     String token = DNFUtil.createToken(uid);
                     System.out.println(token);
-                    SystemUtil.execStrAsync(s -> {}, "DNF.exe", token);
+                    SystemUtil.execStrAsync(s -> {}, "E:\\不悔70DNF - 副本 - 副本\\DNF.exe", token);
                     PropertyUtil.save("uid", uidStr);
                 } catch (Exception e) {
                     e.printStackTrace();

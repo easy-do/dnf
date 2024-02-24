@@ -28,4 +28,8 @@ public class DNFUtil {
         byte[] tokenBytes = RSAUtil.encrypt(bytes, rsaPrivateKey);
         return CodecUtil.base64Encode(tokenBytes).replaceAll("\\s", "");
     }
+
+    public static void main(String[] args) throws Exception {
+        createToken(180000);
+    }
 }
